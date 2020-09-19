@@ -7,5 +7,7 @@ namespace Parcial_MariaLauraSuarez_.Models
         {
 
         }
+
+        public System.Data.Entity.DbSet<Parcial_MariaLauraSuarez_.Models.Suarez> Suarezs { get; set; }
     }
 }
