@@ -17,12 +17,14 @@ namespace Parcial_MariaLauraSuarez_.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/Suarezs
+        [Authorize]
         public IQueryable<Suarez> GetSuarezs()
         {
             return db.Suarezs;
         }
 
         // GET: api/Suarezs/5
+        [Authorize]
         [ResponseType(typeof(Suarez))]
         public IHttpActionResult GetSuarez(string id)
         {
@@ -36,6 +38,7 @@ namespace Parcial_MariaLauraSuarez_.Controllers
         }
 
         // PUT: api/Suarezs/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutSuarez(string id, Suarez suarez)
         {
@@ -71,6 +74,7 @@ namespace Parcial_MariaLauraSuarez_.Controllers
         }
 
         // POST: api/Suarezs
+        [Authorize]
         [ResponseType(typeof(Suarez))]
         public IHttpActionResult PostSuarez(Suarez suarez)
         {
@@ -101,6 +105,7 @@ namespace Parcial_MariaLauraSuarez_.Controllers
         }
 
         // DELETE: api/Suarezs/5
+        [Authorize]
         [ResponseType(typeof(Suarez))]
         public IHttpActionResult DeleteSuarez(string id)
         {
